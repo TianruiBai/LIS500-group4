@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--
+  resources.html : the Implicit Bias resource guide.
+  Initials: XX  (replace XX with your initials)
+
+  CODING CHOICES (why I built it this way):
+  1. This page is supposed to be laid out like a library resource guide: a little
+     intro, a "jump to" list at the top, then one section per topic,
+     and a links list at the end. I did this so people
+     can skim to the part they need.
+  2. The jump list uses anchor links. Each one points
+     to a section with a matching id. no JavaScript.
+  3. I used a definition list (dl, dt, dd) for the key terms,
+     because a term plus its meaning is exactly what that tag is for.
+  4. The grey boxes ("callout") are for definitions and our own
+     opinions, so they stand out from the regular text.
+  5. All styling is in stylepage.css. I added a few new classes there
+     (callout, jump, resource-list) and commented them. No inline CSS.
+  6. Every link to another website uses target="_blank" and
+     rel="noopener" so it opens in a new tab and keeps our site open.
+  7. The header and menu match the other pages. The class "current"
+     marks Bias Resources as the page you are on.
+  8. I wrote the explanations in plain language on purpose, since
+     the audience is first-year college students seeing these terms
+     for the first time.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bias Resources | Code, Bias, and Power</title>
+  <link rel="stylesheet" href="stylepage.css">
+</head>
+<body>
+
+  <!-- HEADER + NAV: Standard site menu across all pages -->
+  <header>
+    <div class="header-inner">
+      <span class="site-name">Code, Bias, and Power</span>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="resources.html" class="current">Bias Resources</a></li>
+          <li><a href="hero.html">Tech Hero</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Implicit Bias: A Starter Guide</h1>
+    <p>If you're jumping into concepts like <em>implicit bias</em>, the <em>IAT</em>, or <em>intersectionality</em> for the first time, it can feel like a lot of jargon. We put this page together to break down what these terms actually mean in plain English, share our take on the research, and point you toward solid resources.</p>
+
+    <!-- JUMP LIST: Direct links to page sections -->
+    <h2>On this page</h2>
+    <ul class="jump">
+      <li><a href="#terms">Quick definitions</a></li>
+      <li><a href="#implicit-bias">What implicit bias really means</a></li>
+      <li><a href="#iat">Breaking down the IAT</a></li>
+      <li><a href="#intersectionality">Understanding intersectionality</a></li>
+      <li><a href="#tech">Why tech isn't neutral</a></li>
+      <li><a href="#links">Where to keep reading</a></li>
+    </ul>
+
+    <section id="terms">
+      <h2>Quick definitions</h2>
+      <div class="callout">
+        <dl>
+          <dt>Implicit bias</dt>
+          <dd>The split-second mental shortcuts and assumptions our brains make about people without us consciously choosing them or realizing it's happening.</dd>
+          <dt>IAT (Implicit Association Test)</dt>
+          <dd>An online speed-sorting test created by researchers to measure how fast your brain pairs specific groups of people with positive or negative concepts.</dd>
+          <dt>Intersectionality</dt>
+          <dd>A framework showing how different parts of who you are, like race, gender, class, and disability, overlap and shape how you experience power or discrimination.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="implicit-bias">
+      <h2>What implicit bias really means</h2>
+      <p>When most people hear the word "bias," they picture intentional prejudice or outright bigotry. But implicit bias works differently. It's built out of the background patterns, stereotypes, and media messages our brains absorb over a lifetime without asking for our permission.</p>
+      <p>That’s why someone can genuinely care about equality and still catch themselves making automatic, biased assumptions. Unpacking implicit bias isn't about calling people "bad"—it's about recognizing the cultural conditioning we've all taken in and learning to question it.</p>
+    </section>
+
+    <section id="iat">
+      <h2>Breaking down the IAT (Implicit Association Test)</h2>
+      <p>Created by Harvard's Project Implicit, the IAT asks you to sort words and images into categories as fast as you can by tapping keys. It logs your <strong>reaction time in milliseconds</strong>. The core theory is simple: if your brain naturally connects two concepts (like "science" and "male"), you'll sort them faster than ideas you don't instantly link.</p>
+
+      <div class="callout">
+        <h3>Our honest take on the IAT</h3>
+        <p>Taking the test is definitely eye-opening, but we don't think a single IAT score is a definitive "verdict" on what someone believes. Here’s why we take the numbers with a grain of salt:</p>
+        <ul>
+          <li><strong>How tired you are changes things:</strong> Because the test relies on millisecond speed, being distracted, or fatigued directly affects your score.</li>
+          <li><strong>You can outsmart the clock:</strong> Anyone who knows how the test works can easily slow down their responses on purpose to balance out their times.</li>
+          <li><strong>It assumes everyone plays fair:</strong> The test asks you to go as fast as possible, but there's no way to verify if someone is rushing or overthinking.</li>
+          <li><strong>Results shift over time:</strong> Psychologists still actively debate how strongly an individual's IAT score predicts how they’ll act in real-life situations.</li>
+        </ul>
+        <p>Bottom line: we see the IAT as a helpful tool for starting an honest conversation with yourself, not an unchangeable label.</p>
+      </div>
+    </section>
+
+    <section id="intersectionality">
+      <h2>Understanding intersectionality</h2>
+      <p>Legal scholar Kimberl&eacute; Crenshaw coined the term "intersectionality," and scholars like Patricia Hill Collins expanded it. The main point is that none of us live in a single box. Your race, gender, class, age, and ability interact with one another constantly.</p>
+      <p><strong>Here’s an everyday example:</strong> A Black woman and a white woman might both experience gender bias, but the Black woman also faces racial discrimination that changes the nature of those barriers. If we only analyze gender or race separately, we completely miss the unique challenges faced by people living at that intersection.</p>
+      <p>If we want to build fairer systems, looking at single categories in isolation just doesn't cut it.</p>
+    </section>
+
+    <section id="tech">
+      <h2>Why tech isn't neutral</h2>
+      <p>Biases don't just stay inside human minds, they get coded into software. AI, algorithms, and automated tools are trained on massive datasets created by humans (Who might be biased). When that data reflects historical inequalities, the software ends up repeating and magnifying those exact same biases under the guise of "objective math."</p>
+      <p>A clear real-world example: researchers found that commercial facial recognition software had significantly higher error rates when identifying darker-skinned women compared to lighter-skinned men. Learning about bias helps us ask critical questions: Who built this tool? What data trained it? And who does it leave out?</p>
+    </section>
+
+    <section id="links">
+      <h2>Where to keep reading</h2>
+      <p>Hand-picked resources if you want to test yourself or dig deeper into the research.</p>
+      <ul class="resource-list">
+        <li>
+          <a href="https://implicit.harvard.edu/implicit/takeatouchtestv2.html" target="_blank" rel="noopener">Project Implicit: Take a Demonstration Test</a>
+          <span>Try an IAT test yourself (race, gender, age, etc.). Be sure to skim the intro notes first.</span>
+        </li>
+        <li>
+          <a href="https://implicit.harvard.edu/implicit/faqs.html" target="_blank" rel="noopener">Project Implicit: Official FAQ</a>
+          <span>Direct answers from Harvard researchers on what test results actually mean (and what they don't).</span>
+        </li>
+        <li>
+          <a href="https://www.scientificamerican.com/article/how-to-think-about-implicit-bias/" target="_blank" rel="noopener">Scientific American: How to Think about "Implicit Bias"</a>
+          <span>An accessible breakdown of what cognitive science agrees on and where researchers disagree.</span>
+        </li>
+        <li>
+          <a href="https://ethicsunwrapped.utexas.edu/video/implicit-bias" target="_blank" rel="noopener">Ethics Unwrapped: Implicit Bias Explainer Video</a>
+          <span>A short, digestible video from UT Austin breaking down how subconscious bias works.</span>
+        </li>
+        <li>
+          <a href="https://www.ted.com/talks/kimberle_crenshaw_the_urgency_of_intersectionality" target="_blank" rel="noopener">Kimberl&eacute; Crenshaw: The Urgency of Intersectionality (TED Talk)</a>
+          <span>The key speaker who coined the term explains why intersectional analysis is vital.</span>
+        </li>
+        <li>
+          <a href="https://subjectguides.library.american.edu/c.php?g=1025915&amp;p=7715530" target="_blank" rel="noopener">American University Library: Implicit Bias Research Guide</a>
+          <span>A curated university library guide filled with recommended articles, books, and multimedia.</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>

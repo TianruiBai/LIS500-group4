@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+  index.html : the splash (welcome) page.
+  Initials: GR TB
+
+  CODING CHOICES:
+  1. We used semantic tags (header, nav, main, footer) instead of
+     plain divs. They tell browsers and screen readers what each
+     part of the page is, which helps accessibility.
+  2. All styling lives in stylepage.css. We completely avoided inline CSS or 
+  `<style>` blocks to maintain clean code separation and keep formatting 
+    consistent everywhere.
+  3. The menu is a list inside nav. A list is the correct way to
+     mark up a group of links, and CSS turns it into a horizontal bar.
+  4. The viewport meta tag makes the page scale correctly on phones.
+  5. The three cards at the bottom send visitors to the other pages,
+     so a first-time visitor knows what the site offers right away.
+  6. The class "current" on one menu link marks the page you are on.
+     We change which link has it on each page.
+  7. This site is hand-coded. I did not use a template.
+  8. Our group is following the IBM Carbon Design System for the
+     look. We went for that style (black top bar, grey tiles,
+     blue buttons)
+-->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Code, Bias, and Power</title>
+  <link rel="stylesheet" href="stylepage.css">
+</head>
+<body>
+
+  <!-- HEADER + MENU: identical on every page so navigation stays consistent -->
+  <header>
+    <div class="header-inner">
+      <span class="site-name">Code, Bias, and Power</span>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="current">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="resources.html">Bias Resources</a></li>
+          <li><a href="hero.html">Tech Hero</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO: first impression. One headline, one sentence, one button. -->
+    <section class="hero">
+      <h1>Technology is never neutral.</h1>
+      <p>This site explores how bias gets built into tech, who is working to change it, and where you can start learning more.</p>
+      <a class="button" href="resources.html">Start with the bias guide</a>
+    </section>
+
+    <!-- CARDS: a quick preview of the three other pages -->
+    <section class="cards">
+      <article class="card">
+        <h3><a href="about.html">About Us</a></h3>
+        <p>Who made this site and why this topic matters to us.</p>
+      </article>
+      <article class="card">
+        <h3><a href="resources.html">Bias Resources</a></h3>
+        <p>A beginner's guide to implicit bias, the IAT, and intersectionality.</p>
+      </article>
+      <article class="card">
+        <h3><a href="hero.html">Tech Hero</a></h3>
+        <p>Meet someone pushing tech to be fairer for everyone.</p>
+      </article>
+    </section>
+  </main>
+
+</body>
+</html>
