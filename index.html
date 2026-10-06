@@ -3,24 +3,27 @@
   index.html : the splash (welcome) page.
   Initials: GR TB
 
-  CODING CHOICES:
-  1. We used semantic tags (header, nav, main, footer) instead of
-     plain divs. They tell browsers and screen readers what each
-     part of the page is, which helps accessibility.
-  2. All styling lives in stylepage.css. We completely avoided inline CSS or 
-  `<style>` blocks to maintain clean code separation and keep formatting 
-    consistent everywhere.
-  3. The menu is a list inside nav. A list is the correct way to
-     mark up a group of links, and CSS turns it into a horizontal bar.
-  4. The viewport meta tag makes the page scale correctly on phones.
+  Designs:
+  1. We choose to use the semantic tags, like header, nav, and main.
+  -- These are the different parts of our page, provide a basic structure or framework, and help
+  -- screen readers understand how the content is arranged.
+  2. About styling, all active CSS styling is under the stylepage.css and carbon.css(for IBM Carbon Design 
+  -- Language). Using separate CSS file help us to keep both HTML clean, and 
+  -- make our life easier when we want to change them, since we don't need going back and forth
+  -- to change every files. Inline CSS is useful just for small part, not giant describe and denote
+  -- inline.
+  3. In order to keep navigation stright forward, or navigation should be able to seen directly.
+  --  We put as a navigation bar. we still need to optimize it for both desktop and mobile. 
+  4. Design for mobile platform, no need to talk more about this, nowadays, everyone use phone. 
   5. The three cards at the bottom send visitors to the other pages,
-     so a first-time visitor knows what the site offers right away.
-  6. The class "current" on one menu link marks the page you are on.
-     We change which link has it on each page.
-  7. This site is hand-coded. I did not use a template.
-  8. Our group is following the IBM Carbon Design System for the
-     look. We went for that style (black top bar, grey tiles,
-     blue buttons)
+  -- with brief information, kind of another way of navigation. But provide more
+  -- information, while keep our main page not that too empty.
+  6. It's better for user's experience, for giving them idea what page there are at.
+  -- One is title, and another one is the indication on navigation bar, which page is the current page.
+  7. We decide to use the IBM Carbon Design Language for this site.
+  --  Most reason is, IBM Carbon Design Language is well-established design language, 
+  --  and it provide a lot of guidelines on how we could design the website, the
+  --  convey the information to users in stright forward way.
 -->
 
 <html lang="en">
@@ -28,6 +31,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Code, Bias, and Power</title>
+  <link rel="stylesheet" href="carbon.css">
   <link rel="stylesheet" href="stylepage.css">
 </head>
 <body>

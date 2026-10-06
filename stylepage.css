@@ -1,59 +1,26 @@
-/* ==========================================================
-   stylepage.css : the ONE stylesheet for the whole site.
-   Initials: GR TB
-
-   DESIGN DIRECTION: Our group decided to base our look on IBM's Carbon Design System. 
-   We liked how clean and structured it looks—dark top bar, square boxes, 
-   grey/blue layout, light headings, and clean typography. Writing this 
-   from scratch helped us match that style without using heavy frameworks.
-   ========================================================== */
-
-/* ---------- 0. FONT ----------
-  Loaded IBM Plex Sans directly here so all pages share the exact same 
-   font without needing extra link tags in every HTML file. Arial works as 
-   a fallback just in case the Google font doesn't load. */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap");
 
-/* ---------- 1. COLORS AND SIZES (CSS variables) ----------
-   We setup standard CSS variables to stay consistent. Using carbon-inspired 
-   shades of grey and one strong blue for links/interctive parts. Setting these 
-   here makes it easy to tweak colors across the entire site later. */
 :root {
-  --text: #161616;          /* near-black body text */
-  --text-secondary: #525252; /* softer grey for supporting text */
-  --background: #ffffff;    /* page background */
-  --layer: #f4f4f4;         /* light grey for boxes and the page header */
-  --layer-hover: #e8e8e8;   /* slightly darker grey when you hover a box */
-  --border: #e0e0e0;        /* thin dividing lines */
-  --header-bg: #161616;     /* black top bar */
-  --blue: #0f62fe;          /* Carbon's interactive blue (links, buttons) */
-  --blue-hover: #0050e6;    /* darker blue on hover */
-  --max-width: 1056px;      /* Carbon's max content width, keeps lines readable */
+  --max-width: 1056px;
 }
 
-/* ---------- 2. BASIC RESET ----------
-   Removing default browser margins and setting box-sizing to border-box. 
-   This keeps element sizing predictable across different devices.*/
 * {
-  box-sizing: border-box;  /* padding doesn't make boxes wider than I set them */
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
   font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
-  background: var(--background);
-  color: var(--text);
+  background: var(--cds-background);
+  color: var(--cds-text-primary);
   line-height: 1.5;
   font-size: 16px;
 }
 
-/* ---------- 3. HEADER AND NAVIGATION ----------
-  Built a sleek top navbar using Flexbox. It places the site title on the left 
-   and navigation links on the right, so it wrapping on mobile screens. */
 header {
-  background: var(--header-bg);
-  color: #ffffff;
+  background: var(--cds-gray-100);
+  color: var(--cds-text-on-color);
 }
 
 .header-inner {
@@ -71,7 +38,7 @@ header {
   font-weight: 600;
   display: flex;
   align-items: center;
-  min-height: 48px;      /* Carbon's header is 48px tall */
+  min-height: 48px;
 }
 
 nav ul {
@@ -85,32 +52,28 @@ nav a {
   align-items: center;
   min-height: 48px;
   padding: 0 1rem;
-  color: #c6c6c6;
+  color: var(--cds-gray-30);
   text-decoration: none;
   font-size: 0.875rem;
   border-bottom: 3px solid transparent;
 }
 
-/* Hover changes background to darker grey. 
-   Added a blue bottom border to mark the currently active page. */
 nav a:hover {
-  background: #393939;
-  color: #ffffff;
+  background: var(--cds-background-inverse);
+  color: var(--cds-text-on-color);
 }
 
 nav a.current {
-  color: #ffffff;
-  border-bottom-color: var(--blue);
+  color: var(--cds-text-on-color);
+  border-bottom-color: var(--cds-border-interactive);
 }
 
-/* ---------- 4. MAIN CONTENT AREA ---------- */
 main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 3rem 1rem;
 }
 
-/* Kept headings lighter weight (300) to replicate kind of a clean aesthetic */
 h1, h2, h3 {
   font-weight: 300;
   line-height: 1.2;
@@ -123,17 +86,15 @@ h3 { font-size: 1.25rem; font-weight: 400; }
 
 p {
   margin-bottom: 1rem;
-  max-width: 40rem;      /* Having a cap for the paragraph width makes things more readable */
+  max-width: 40rem;
 }
 
-a { color: var(--blue); }
-a:hover { color: var(--blue-hover); }
+a { color: var(--cds-link-primary); }
+a:hover { color: var(--cds-link-primary-hover); }
 
-/* ---------- 5. SPLASH (HOME PAGE) HERO ----------
- A grey banner area for introduction sections across main pages. */
 .hero {
-  background: var(--layer);
-  border-bottom: 1px solid var(--border);
+  background: var(--cds-layer-01);
+  border-bottom: 1px solid var(--cds-border-subtle-00);
   padding: 3rem 2rem 4rem;
   margin-bottom: 3rem;
 }
@@ -145,19 +106,16 @@ a:hover { color: var(--blue-hover); }
 
 .hero p {
   font-size: 1.25rem;
-  color: var(--text-secondary);
+  color: var(--cds-text-secondary);
 }
 
-/* ---------- 6. BUTTONS ----------
-   Designed sharp rectangular buttons without rounded corners. 
-   Used ::after to insert the arrow dynamically instead of it being cluttery HTML */
 .button {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
   min-width: 16rem;
-  background: var(--blue);
-  color: #ffffff;
+  background: var(--cds-button-primary);
+  color: var(--cds-text-on-color);
   text-decoration: none;
   font-size: 0.875rem;
   padding: 1rem 1rem;
@@ -165,66 +123,57 @@ a:hover { color: var(--blue-hover); }
 }
 
 .button::after {
-  content: "\2192";   /* right arrow */
+  content: "\2192";
   font-size: 1.25rem;
 }
 
 .button:hover {
-  background: var(--blue-hover);
-  color: #ffffff;
+  background: var(--cds-button-primary-hover);
+  color: var(--cds-text-on-color);
 }
 
-/* ---------- 7. TILE GRID (links to the other pages) ----------
-   Have a grid layout to display internal page links. Using auto-fit with minmax 
-   makes the grid responsive automatically without needing extra media queries. */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1px;                 /* 1px gap shows the border color between tiles */
-  background: var(--border);
-  border: 1px solid var(--border);
+  gap: 1px;
+  background: var(--cds-border-subtle-00);
+  border: 1px solid var(--cds-border-subtle-00);
 }
 
 .card {
-  background: var(--layer);
+  background: var(--cds-layer-01);
   padding: 1rem 1rem 3rem;
   min-height: 11rem;
   position: relative;
 }
 
 .card:hover {
-  background: var(--layer-hover);
+  background: var(--cds-layer-hover-01);
 }
 
 .card h3 a {
-  color: var(--text);
+  color: var(--cds-text-primary);
   text-decoration: none;
 }
 
 .card h3 a:hover {
-  color: var(--blue);
+  color: var(--cds-link-primary);
 }
 
 .card p {
-  color: var(--text-secondary);
+  color: var(--cds-text-secondary);
   font-size: 0.875rem;
 }
 
-/* Small arrow in the bottom-right corner of each tile. */
 .card::after {
   content: "\2192";
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  color: var(--blue);
+  color: var(--cds-link-primary);
   font-size: 1.25rem;
 }
 
-/* ---------- 7b. RESOURCE PAGE STYLES ----------
-   These classes are used on resources.html. */
-
-/* "Jump to" list at the top of the guide: horizontal blue links
-   that wrap on small screens. */
 .jump {
   list-style: none;
   display: flex;
@@ -233,10 +182,9 @@ a:hover { color: var(--blue-hover); }
   margin-bottom: 1rem;
 }
 
-/* Featured callout boxes with left accent border for key definitions and quotes. */
 .callout {
-  background: var(--layer);
-  border-left: 4px solid var(--blue);
+  background: var(--cds-layer-01);
+  border-left: 4px solid var(--cds-border-interactive);
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
 }
@@ -250,41 +198,37 @@ a:hover { color: var(--blue-hover); }
 
 .callout li { margin-bottom: 0.5rem; }
 
-/* Definition list: term in bold, meaning underneath. */
 dt {
   font-weight: 600;
   margin-top: 0.75rem;
 }
 
 dd {
-  color: var(--text-secondary);
+  color: var(--cds-text-secondary);
   max-width: 40rem;
 }
 
-/* Links list: each entry has a link, then a grey description under
-   it, separated by thin lines like a table of resources. */
 .resource-list {
   list-style: none;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--cds-border-subtle-00);
 }
 
 .resource-list li {
   padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--cds-border-subtle-00);
 }
 
 .resource-list a { font-weight: 600; }
 
 .resource-list span {
   display: block;
-  color: var(--text-secondary);
+  color: var(--cds-text-secondary);
   font-size: 0.875rem;
 }
 
-/* ---------- 8. FOOTER ---------- */
 footer {
-  background: var(--header-bg);
-  color: #c6c6c6;
+  background: var(--cds-gray-100);
+  color: var(--cds-gray-30);
   padding: 2rem 1rem;
   font-size: 0.875rem;
   margin-top: 4rem;
@@ -293,5 +237,5 @@ footer {
 footer p {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 1rem;       /* lines the footer text up with the page content */
+  padding: 0 1rem;
 }

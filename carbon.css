@@ -1,0 +1,89 @@
+/* We choose Carbon's White theme for our shared colors.
+   Reference: https://www.carbondesignsystem.com/building-blocks/foundations/color/tokens */
+:root {
+  --cds-white: #ffffff;
+  --cds-gray-10: #f4f4f4;
+  --cds-gray-20: #e0e0e0;
+  --cds-gray-30: #c6c6c6;
+  --cds-gray-40: #a8a8a8;
+  --cds-gray-50: #8d8d8d;
+  --cds-gray-60: #6f6f6f;
+  --cds-gray-70: #525252;
+  --cds-gray-80: #393939;
+  --cds-gray-100: #161616;
+  --cds-blue-20: #d0e2ff;
+  --cds-blue-30: #a6c8ff;
+  --cds-blue-40: #78a9ff;
+  --cds-blue-60: #0f62fe;
+  --cds-blue-70: #0043ce;
+  --cds-blue-80: #002d9c;
+
+  --cds-background: var(--cds-white);
+  --cds-background-brand: var(--cds-blue-60);
+  --cds-background-inverse: var(--cds-gray-80);
+  --cds-background-inverse-hover: #474747;
+
+  --cds-layer-01: var(--cds-gray-10);
+  --cds-layer-02: var(--cds-white);
+  --cds-layer-03: var(--cds-gray-10);
+  --cds-layer-hover-01: #e8e8e8;
+  --cds-layer-active-01: var(--cds-gray-30);
+  --cds-layer-selected-01: var(--cds-gray-20);
+  --cds-layer-selected-hover-01: #d1d1d1;
+
+  --cds-field-01: var(--cds-gray-10);
+  --cds-field-02: var(--cds-white);
+  --cds-field-hover-01: #e8e8e8;
+
+  --cds-border-subtle-00: var(--cds-gray-20);
+  --cds-border-subtle-01: var(--cds-gray-30);
+  --cds-border-subtle-02: var(--cds-gray-20);
+  --cds-border-strong-01: var(--cds-gray-50);
+  --cds-border-interactive: var(--cds-blue-60);
+  --cds-border-inverse: var(--cds-gray-100);
+  --cds-border-disabled: var(--cds-gray-30);
+
+  --cds-text-primary: var(--cds-gray-100);
+  --cds-text-secondary: var(--cds-gray-70);
+  --cds-text-helper: var(--cds-gray-60);
+  --cds-text-placeholder: rgba(22, 22, 22, 0.4);
+  --cds-text-disabled: rgba(22, 22, 22, 0.25);
+  --cds-text-on-color: var(--cds-white);
+  --cds-text-on-color-disabled: var(--cds-gray-50);
+  --cds-text-inverse: var(--cds-white);
+  --cds-text-error: #da1e28;
+
+  --cds-link-primary: var(--cds-blue-60);
+  --cds-link-primary-hover: var(--cds-blue-70);
+  --cds-link-secondary: var(--cds-blue-70);
+  --cds-link-visited: #8a3ffc;
+  --cds-link-inverse: var(--cds-blue-40);
+  --cds-link-inverse-hover: var(--cds-blue-30);
+
+  --cds-icon-primary: var(--cds-gray-100);
+  --cds-icon-secondary: var(--cds-gray-70);
+  --cds-icon-on-color: var(--cds-white);
+
+  --cds-button-primary: var(--cds-blue-60);
+  --cds-button-primary-hover: #0050e6;
+  --cds-button-primary-active: var(--cds-blue-80);
+  --cds-button-secondary: var(--cds-gray-80);
+  --cds-button-secondary-hover: #474747;
+  --cds-button-secondary-active: var(--cds-gray-60);
+  --cds-button-danger-primary: #da1e28;
+  --cds-button-danger-hover: #b81921;
+  --cds-button-danger-active: #750e13;
+  --cds-button-disabled: var(--cds-gray-30);
+
+  --cds-support-error: #da1e28;
+  --cds-support-success: #24a148;
+  --cds-support-warning: #f1c21b;
+  --cds-support-info: var(--cds-blue-70);
+
+  --cds-interactive: var(--cds-blue-60);
+  --cds-focus: var(--cds-blue-60);
+  --cds-focus-inset: var(--cds-white);
+  --cds-focus-inverse: var(--cds-white);
+  --cds-highlight: var(--cds-blue-20);
+  --cds-overlay: rgba(0, 0, 0, 0.6);
+}

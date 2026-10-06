@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <!--
   resources.html : the Implicit Bias resource guide.
-  Initials: XX  (replace XX with your initials)
+  Initials: GR
 
-  CODING CHOICES (why I built it this way):
-  1. This page is supposed to be laid out like a library resource guide: a little
-     intro, a "jump to" list at the top, then one section per topic,
-     and a links list at the end. I did this so people
-     can skim to the part they need.
-  2. The jump list uses anchor links. Each one points
-     to a section with a matching id. no JavaScript.
-  3. I used a definition list (dl, dt, dd) for the key terms,
-     because a term plus its meaning is exactly what that tag is for.
-  4. The grey boxes ("callout") are for definitions and our own
-     opinions, so they stand out from the regular text.
-  5. All styling is in stylepage.css. I added a few new classes there
-     (callout, jump, resource-list) and commented them. No inline CSS.
-  6. Every link to another website uses target="_blank" and
-     rel="noopener" so it opens in a new tab and keeps our site open.
-  7. The header and menu match the other pages. The class "current"
-     marks Bias Resources as the page you are on.
-  8. I wrote the explanations in plain language on purpose, since
-     the audience is first-year college students seeing these terms
-     for the first time.
+Designs:
+  1. Since this is a resource page to introduce implicit bias, IAT, and
+  -- intersectionality, we arrange it like a library resource guide.
+  -- A short introduction first, then separate topics, and reading links
+  -- at the bottom. Users could follow the whole page or find one part.
+
+  2. We've thought about people who just want to read a particular topic,
+  -- so we put an "On this page" list near the top, kind of another navigation.
+  -- For this part, we just use anchor links with matching section ids,
+  -- since we're building a simple website, no JavaScript needed here.
+
+  3. For the quick definitions, we choose to use dl, dt, and dd.
+  -- Our idea is to put the term and its explanation together,
+  -- so users could get a basic understanding before reading more.
+  -- These tags already provide the structure for this kind of content.
+
+  4. We choose grey boxes for the definitions and our take on the IAT.
+  -- These parts should be able to seen directly, especially our opinions,
+  -- which we want to distinguish from the general explanation.
+  -- Using a different background helps, without adding too much decoration.
+
+  5. About styling, we keep it under the same stylepage.css.
+  -- Since both pages belong to the same website, we want them to look
+  -- consistent. We just add callout, jump, and resource-list for the
+  -- different parts here, no need to repeat the CSS inside HTML.
+
+  6. For the reading links, we choose to open them in a new tab.
+  -- Users could check the resource while keeping this guide open,
+  -- rather than going back and forth between our page and another website.
+  -- We also use rel="noopener" to prevent the new tab from accessing our page.
+
+  7. It's better for user's experience to keep the same header and menu.
+  -- They already see this navigation on the home page, so we keep it here.
+  -- The page title and the indication on navigation bar give them
+  -- an idea that they are currently reading Bias Resources.
+
+  8. Our idea is to give a straightforward introduction to these topics.
+  -- Since some students might be seeing these terms for the first time,
+  -- we use plain language and examples before giving further reading.
+  -- For the resource list, we also put a brief description under each link,
+  -- so users have an idea what they could find before opening it.
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bias Resources | Code, Bias, and Power</title>
+  <link rel="stylesheet" href="carbon.css">
   <link rel="stylesheet" href="stylepage.css">
 </head>
 <body>
