@@ -113,7 +113,9 @@ a:hover { color: var(--cds-link-primary-hover); }
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 16rem;
+  width: 16rem;
+  max-width: 100%;
+  gap: 1rem;
   background: var(--cds-button-primary);
   color: var(--cds-text-on-color);
   text-decoration: none;
@@ -134,7 +136,7 @@ a:hover { color: var(--cds-link-primary-hover); }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   gap: 1px;
   background: var(--cds-border-subtle-00);
   border: 1px solid var(--cds-border-subtle-00);
@@ -151,12 +153,18 @@ a:hover { color: var(--cds-link-primary-hover); }
   background: var(--cds-layer-hover-01);
 }
 
-.card h3 a {
+.card h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.card h2 a {
   color: var(--cds-text-primary);
   text-decoration: none;
 }
 
-.card h3 a:hover {
+.card h2 a:hover {
   color: var(--cds-link-primary);
 }
 

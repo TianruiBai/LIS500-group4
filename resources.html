@@ -2,8 +2,7 @@
 <!--
   resources.html : the Implicit Bias resource guide.
   Initials: GR
-
-Designs:
+Ideas for takeaway:
   1. Since this is a resource page to introduce implicit bias, IAT, and
   -- intersectionality, we arrange it like a library resource guide.
   -- A short introduction first, then separate topics, and reading links
@@ -24,7 +23,7 @@ Designs:
   -- which we want to distinguish from the general explanation.
   -- Using a different background helps, without adding too much decoration.
 
-  5. About styling, we keep it under the same stylepage.css.
+  5. About styling, we use carbon.css for colors and stylepage.css for layout.
   -- Since both pages belong to the same website, we want them to look
   -- consistent. We just add callout, jump, and resource-list for the
   -- different parts here, no need to repeat the CSS inside HTML.
@@ -59,11 +58,11 @@ Designs:
   <header>
     <div class="header-inner">
       <span class="site-name">Code, Bias, and Power</span>
-      <nav>
+      <nav >
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="resources.html" class="current">Bias Resources</a></li>
+          <li><a href="resources.html" class="current" >Bias Resources</a></li>
           <li><a href="hero.html">Tech Hero</a></li>
         </ul>
       </nav>
@@ -71,18 +70,24 @@ Designs:
   </header>
 
   <main>
-    <h1>Implicit Bias: A Starter Guide</h1>
-    <p>If you're jumping into concepts like <em>implicit bias</em>, the <em>IAT</em>, or <em>intersectionality</em> for the first time, it can feel like a lot of jargon. We put this page together to break down what these terms actually mean in plain English, share our take on the research, and point you toward solid resources.</p>
+    <h1>Implicit Bias: A Resource Guide</h1>
+    <p>
+      Before discussing bias in software, it helps to explain what we mean by
+      bias. We start with <em>implicit bias</em>, the <em>Implicit Association
+      Test (IAT)</em>, and <em>intersectionality</em>. There is quite a bit written
+      about each topic, so this page keeps to the basics and a few examples.
+      The links at the bottom are there for more detail.
+    </p>
 
     <!-- JUMP LIST: Direct links to page sections -->
     <h2>On this page</h2>
     <ul class="jump">
       <li><a href="#terms">Quick definitions</a></li>
-      <li><a href="#implicit-bias">What implicit bias really means</a></li>
-      <li><a href="#iat">Breaking down the IAT</a></li>
-      <li><a href="#intersectionality">Understanding intersectionality</a></li>
-      <li><a href="#tech">Why tech isn't neutral</a></li>
-      <li><a href="#links">Where to keep reading</a></li>
+      <li><a href="#implicit-bias">About implicit bias</a></li>
+      <li><a href="#iat">Implicit Association Test</a></li>
+      <li><a href="#intersectionality">Intersectionality</a></li>
+      <li><a href="#tech">Bias in technology</a></li>
+      <li><a href="#links">Further reading</a></li>
     </ul>
 
     <section id="terms">
@@ -90,78 +95,136 @@ Designs:
       <div class="callout">
         <dl>
           <dt>Implicit bias</dt>
-          <dd>The split-second mental shortcuts and assumptions our brains make about people without us consciously choosing them or realizing it's happening.</dd>
+          <dd>Associations about people or groups that happen automatically, sometimes without us noticing. They can differ from what we consciously believe.</dd>
           <dt>IAT (Implicit Association Test)</dt>
-          <dd>An online speed-sorting test created by researchers to measure how fast your brain pairs specific groups of people with positive or negative concepts.</dd>
+          <dd>A sorting test that compares how quickly you respond to different pairings of words or pictures. The difference in time is used to estimate associations between concepts.</dd>
           <dt>Intersectionality</dt>
-          <dd>A framework showing how different parts of who you are, like race, gender, class, and disability, overlap and shape how you experience power or discrimination.</dd>
+          <dd>A way of studying how race, gender, class, and other social categories interact in people's experiences of discrimination and power.</dd>
         </dl>
       </div>
     </section>
 
     <section id="implicit-bias">
-      <h2>What implicit bias really means</h2>
-      <p>When most people hear the word "bias," they picture intentional prejudice or outright bigotry. But implicit bias works differently. It's built out of the background patterns, stereotypes, and media messages our brains absorb over a lifetime without asking for our permission.</p>
-      <p>That’s why someone can genuinely care about equality and still catch themselves making automatic, biased assumptions. Unpacking implicit bias isn't about calling people "bad"—it's about recognizing the cultural conditioning we've all taken in and learning to question it.</p>
+      <h2>About implicit bias</h2>
+      <p>
+        A person can support equal opportunities and still picture a man first
+        when thinking about an engineer. That automatic association is the kind
+        of thing implicit bias describes. It can come from repeated experiences,
+        stereotypes, or the people we see represented in media. Saying we believe
+        in equality does not make those associations disappear.
+      </p>
+      <p>
+        This matters in tech because people still make the decisions behind it.
+        Someone reviewing applicants might have a narrow idea of what a programmer
+        looks like. A design team might treat its own needs as the needs of every
+        user. These assumptions deserve attention even when nobody intended to
+        exclude anyone.
+      </p>
     </section>
 
     <section id="iat">
-      <h2>Breaking down the IAT (Implicit Association Test)</h2>
-      <p>Created by Harvard's Project Implicit, the IAT asks you to sort words and images into categories as fast as you can by tapping keys. It logs your <strong>reaction time in milliseconds</strong>. The core theory is simple: if your brain naturally connects two concepts (like "science" and "male"), you'll sort them faster than ideas you don't instantly link.</p>
+      <h2>Implicit Association Test</h2>
+      <p>
+        You can try the <strong>Implicit Association Test (IAT)</strong> on
+        Project Implicit's website. It asks you to sort words or pictures using
+        keys, then changes which categories share a key. The test compares your
+        response times between the two arrangements. Being faster with one
+        pairing is taken as evidence of a stronger association with that pairing.
+      </p>
 
       <div class="callout">
-        <h3>Our honest take on the IAT</h3>
-        <p>Taking the test is definitely eye-opening, but we don't think a single IAT score is a definitive "verdict" on what someone believes. Here’s why we take the numbers with a grain of salt:</p>
+        <h3>What we think about the score</h3>
+        <p>
+          We don't think one IAT score should be used to label somebody. The result
+          comes from a particular task, and treating it as a complete account of
+          a person gives it too much weight. A few things matter when reading it:
+        </p>
         <ul>
-          <li><strong>How tired you are changes things:</strong> Because the test relies on millisecond speed, being distracted, or fatigued directly affects your score.</li>
-          <li><strong>You can outsmart the clock:</strong> Anyone who knows how the test works can easily slow down their responses on purpose to balance out their times.</li>
-          <li><strong>It assumes everyone plays fair:</strong> The test asks you to go as fast as possible, but there's no way to verify if someone is rushing or overthinking.</li>
-          <li><strong>Results shift over time:</strong> Psychologists still actively debate how strongly an individual's IAT score predicts how they’ll act in real-life situations.</li>
+          <li><strong>The result can change.</strong> Practice, distraction, tiredness, or changes in associations can contribute to different scores on another attempt.</li>
+          <li><strong>A score doesn't tell you what someone will do.</strong> One result is not a reliable prediction of one person's behavior in a specific situation.</li>
+          <li><strong>The categories don't fit everyone.</strong> Some tests use pairs such as male/female. People's identities do not all fit into those two categories.</li>
         </ul>
-        <p>Bottom line: we see the IAT as a helpful tool for starting an honest conversation with yourself, not an unchangeable label.</p>
+        <p>
+          It is still worth including here as a way to learn about associations.
+          But the explanation of the result matters as much as the number.
+          <a href="https://implicit.harvard.edu/implicit/faqs.html" target="_blank" rel="noopener">Project Implicit's FAQ</a>
+          goes into the details, including disagreements about what scores mean.
+        </p>
       </div>
     </section>
 
     <section id="intersectionality">
-      <h2>Understanding intersectionality</h2>
-      <p>Legal scholar Kimberl&eacute; Crenshaw coined the term "intersectionality," and scholars like Patricia Hill Collins expanded it. The main point is that none of us live in a single box. Your race, gender, class, age, and ability interact with one another constantly.</p>
-      <p><strong>Here’s an everyday example:</strong> A Black woman and a white woman might both experience gender bias, but the Black woman also faces racial discrimination that changes the nature of those barriers. If we only analyze gender or race separately, we completely miss the unique challenges faced by people living at that intersection.</p>
-      <p>If we want to build fairer systems, looking at single categories in isolation just doesn't cut it.</p>
+      <h2>Intersectionality</h2>
+      <p>
+        Kimberl&eacute; Crenshaw coined the term "intersectionality," and scholars
+        such as Patricia Hill Collins also contributed to this area of study.
+        The idea is that discrimination connected to race, gender, class, or
+        disability does not always happen separately. Studying one category at a
+        time can leave out how they interact.
+      </p>
+      <p>
+        Take the experiences of Black women. A study of racism focused on Black
+        men, combined with a study of sexism focused on white women, would not
+        automatically explain those experiences. There are forms of discrimination
+        involving race and gender together that this approach could miss.
+      </p>
+      <p>
+        The same problem comes up when testing software. Reporting results for
+        "women" as one group can hide differences between women with different
+        skin tones. Those differences need to be checked directly.
+      </p>
     </section>
 
     <section id="tech">
-      <h2>Why tech isn't neutral</h2>
-      <p>Biases don't just stay inside human minds, they get coded into software. AI, algorithms, and automated tools are trained on massive datasets created by humans (Who might be biased). When that data reflects historical inequalities, the software ends up repeating and magnifying those exact same biases under the guise of "objective math."</p>
-      <p>A clear real-world example: researchers found that commercial facial recognition software had significantly higher error rates when identifying darker-skinned women compared to lighter-skinned men. Learning about bias helps us ask critical questions: Who built this tool? What data trained it? And who does it leave out?</p>
+      <h2>Bias in technology</h2>
+      <p>
+        A machine learning system learns from the data it is given. If that data
+        represents some groups better than others, its performance can be uneven.
+        Developers then choose how to test it and which results to report. Bias
+        can be missed at either stage.
+      </p>
+      <p>
+        The <a href="https://www.media.mit.edu/projects/gender-shades/overview/" target="_blank" rel="noopener">Gender Shades study</a>
+        gives a concrete example. It tested commercial systems that assigned gender
+        labels to images of faces, and found higher error rates for darker-skinned
+        women than for lighter-skinned men. The task was gender classification,
+        not identifying who a person was.
+      </p>
+      <p>
+        For us, reporting only the overall accuracy is not enough. A good average
+        can hide poor results for a particular group. Developers should report
+        those differences instead of leaving users to discover them after the
+        software is put into use.
+      </p>
     </section>
 
     <section id="links">
-      <h2>Where to keep reading</h2>
-      <p>Hand-picked resources if you want to test yourself or dig deeper into the research.</p>
+      <h2>Further reading</h2>
+      <p>Here are the test and some reading and videos on these topics. Each link has a short description so you can pick what you need.</p>
       <ul class="resource-list">
         <li>
           <a href="https://implicit.harvard.edu/implicit/takeatouchtestv2.html" target="_blank" rel="noopener">Project Implicit: Take a Demonstration Test</a>
-          <span>Try an IAT test yourself (race, gender, age, etc.). Be sure to skim the intro notes first.</span>
+          <span>The test itself, with several topics to choose from. Read the introductory notes before starting.</span>
         </li>
         <li>
           <a href="https://implicit.harvard.edu/implicit/faqs.html" target="_blank" rel="noopener">Project Implicit: Official FAQ</a>
-          <span>Direct answers from Harvard researchers on what test results actually mean (and what they don't).</span>
+          <span>Useful alongside the test. It explains changing scores and the connection between results and behavior.</span>
         </li>
         <li>
           <a href="https://www.scientificamerican.com/article/how-to-think-about-implicit-bias/" target="_blank" rel="noopener">Scientific American: How to Think about "Implicit Bias"</a>
-          <span>An accessible breakdown of what cognitive science agrees on and where researchers disagree.</span>
+          <span>More discussion of implicit bias and how to read the research.</span>
         </li>
         <li>
           <a href="https://ethicsunwrapped.utexas.edu/video/implicit-bias" target="_blank" rel="noopener">Ethics Unwrapped: Implicit Bias Explainer Video</a>
-          <span>A short, digestible video from UT Austin breaking down how subconscious bias works.</span>
+          <span>A short explanation from UT Austin, if a video works better for you.</span>
         </li>
         <li>
           <a href="https://www.ted.com/talks/kimberle_crenshaw_the_urgency_of_intersectionality" target="_blank" rel="noopener">Kimberl&eacute; Crenshaw: The Urgency of Intersectionality (TED Talk)</a>
-          <span>The key speaker who coined the term explains why intersectional analysis is vital.</span>
+          <span>Crenshaw explains the idea using examples of people left out when race and gender are treated separately.</span>
         </li>
         <li>
           <a href="https://subjectguides.library.american.edu/c.php?g=1025915&amp;p=7715530" target="_blank" rel="noopener">American University Library: Implicit Bias Research Guide</a>
-          <span>A curated university library guide filled with recommended articles, books, and multimedia.</span>
+          <span>More articles, books, and media collected in one library guide.</span>
         </li>
       </ul>
     </section>
