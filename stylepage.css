@@ -100,7 +100,7 @@ a:hover { color: var(--cds-link-primary-hover); }
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   max-width: 36rem;
 }
 
@@ -205,6 +205,15 @@ a:hover { color: var(--cds-link-primary-hover); }
 }
 
 .callout li { margin-bottom: 0.5rem; }
+
+.video-player {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  margin-bottom: 1rem;
+}
 
 dt {
   font-weight: 600;

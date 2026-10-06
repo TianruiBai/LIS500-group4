@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+  about.html : our group and intersectionality.
+  Initials: GR and TB 
+
+  Ideas for takeaway:
+  1. For this page, we put the group introduction first, then intersectionality.
+  -- People should know what this website is about before reading the framework.
+
+  2. We choose separate sections for the explanation and the digital life example.
+  -- Just knowing the definition is not enough, so we put an example after it.
+  -- Easier to see how these different barriers could happen together.
+
+  3. About layout, we just use the same header and CSS files as the other pages.
+  -- carbon.css for colors, stylepage.css for the actual arrangement.
+  -- No need to build another layout for a page mainly made of text.
+
+  4. For the reading, we link to Crenshaw's paper and Collins and Bilge's book.
+  -- We explain the idea in our own words here. The example is hypothetical,
+  -- not something we claim happened to a group member.
+
+  5. We also put links back to the resource guide and tech hero page.
+  -- These pages belong together, so people could go from the explanation
+  -- to the example without always going back to the main page.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Code, Bias, and Power</title>
+  <link rel="stylesheet" href="carbon.css">
+  <link rel="stylesheet" href="stylepage.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-name">Code, Bias, and Power</span>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="current">About Us</a></li>
+          <li><a href="resources.html">Bias Resources</a></li>
+          <li><a href="hero.html">Tech Hero</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>About Us</h1>
+      <p>
+        This is our LIS 500 group project. We look at bias in technology,
+        the people making it, and the different experiences of people using it.
+      </p>
+    </section>
+
+    <section id="group">
+      <h2>Our group</h2>
+      <p>Group members: Gisela Ines Rodriguez Garcia, and Tianrui Bai.</p>
+      <p>
+        We choose to bring these topics together because technical performance
+        is only part of the story. A website can load correctly and still be
+        difficult for someone to use. A system can have a good average accuracy
+        while making more mistakes for one group of people. Those differences
+        matter when deciding whether the technology is actually doing its job.
+      </p>
+    </section>
+
+    <section id="intersectionality">
+      <h2>How we use intersectionality</h2>
+      <p>
+        Intersectionality gives us a way to examine how different forms of
+        inequality work together. Kimberl&eacute; Crenshaw's
+        <a href="https://chicagounbound.uchicago.edu/uclf/vol1989/iss1/8/" target="_blank" rel="noopener">1989 paper</a>
+        explains how treating race and sex as separate issues can leave out
+        discrimination experienced by Black women.
+      </p>
+      <p>
+        Patricia Hill Collins and Sirma Bilge develop this approach in their
+        <a href="https://books.google.com/books/about/Intersectionality.html?id=M2a-CgAAQBAJ" target="_blank" rel="noopener">2016 book, <em>Intersectionality</em></a>.
+        Race, class, gender, age, and disability do not operate independently
+        in people's lives. The point is to study how these relationships affect
+        access and power, rather than just list the identities a person has.
+      </p>
+    </section>
+
+    <section id="digital-life">
+      <h2>What this means for digital life</h2>
+      <p>
+        Consider an older adult with a low income and a visual impairment trying
+        to use an online public service. Buying a newer device may be difficult.
+        Small text and poor screen-reader support can make the service harder to
+        use. If help is only available online, the same person has another barrier
+        when something goes wrong. This is a hypothetical example, but it shows
+        why providing an internet connection alone does not solve every access problem.
+      </p>
+      <p>
+        We think developers should account for these situations during design,
+        instead of treating them as exceptions after release. That means checking
+        who can afford to use a service, who is represented in its testing, and
+        whether people have another way to get help. A single description of the
+        "average user" is too limited for that work.
+      </p>
+    </section>
+
+    <section id="our-pages">
+      <h2>Where the other pages fit</h2>
+      <p>
+        The <a href="resources.html">resource guide</a> explains implicit bias,
+        the IAT, and intersectionality in more detail. Our
+        <a href="hero.html">tech hero page</a> looks at Shuji Nakamura's work on
+        the blue LED and the conditions around his research. We chose him for
+        his invention and earlier experience, including the practical work that
+        came before the Nobel Prize.
+      </p>
+      <p>
+        Together, the pages connect technical work with access, recognition,
+        and the decisions institutions make about people.
+      </p>
+    </section>
+
+    <section id="reading">
+      <h2>Sources for this page</h2>
+      <ul class="resource-list">
+        <li>
+          <a href="https://chicagounbound.uchicago.edu/uclf/vol1989/iss1/8/" target="_blank" rel="noopener">Kimberl&eacute; Crenshaw: Demarginalizing the Intersection of Race and Sex (1989)</a>
+          <span>The original paper, available through the University of Chicago Law School.</span>
+        </li>
+        <li>
+          <a href="https://books.google.com/books/about/Intersectionality.html?id=M2a-CgAAQBAJ" target="_blank" rel="noopener">Patricia Hill Collins and Sirma Bilge: Intersectionality (2016)</a>
+          <span>Book information and a preview. We explain the framework in our own words above.</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
