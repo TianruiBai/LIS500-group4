@@ -15,7 +15,7 @@
   3. In order to keep navigation stright forward, or navigation should be able to seen directly.
   --  We put as a navigation bar. we still need to optimize it for both desktop and mobile. 
   4. Design for mobile platform, no need to talk more about this, nowadays, everyone use phone. 
-  5. The three cards at the bottom send visitors to the other pages,
+  5. The four cards at the bottom send visitors to the other pages,
   -- with brief information, kind of another way of navigation. But provide more
   -- information, while keep our main page not that too empty.
   6. It's better for user's experience, for giving them idea what page there are at.
@@ -32,7 +32,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Code, Bias, and Power</title>
   <link rel="stylesheet" href="carbon.css">
-  <link rel="stylesheet" href="stylepage.css">
+  <link rel="stylesheet" href="stylepage.css?v=20261009">
 </head>
 <body>
 
@@ -45,7 +45,8 @@
           <li><a href="index.html" class="current">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="resources.html">Bias Resources</a></li>
-          <li><a href="hero.html">Tech Hero</a></li>
+          <li><a href="hero.html">Nakamura</a></li>
+          <li><a href="gomez.html">G&oacute;mez</a></li>
         </ul>
       </nav>
     </div>
@@ -59,12 +60,13 @@
         We made this site to explain a few ideas about bias and how they connect
         to technology. The resource guide covers implicit bias, intersectionality,
         and the IAT, including what we think about using its results. You can also
-        find a little about our group and Shuji Nakamura's work on the blue LED.
+        find a little about our group, Shuji Nakamura's blue LED, and Laura
+        G&oacute;mez's work on fairer hiring.
       </p>
       <a class="button" href="resources.html">Read the resource guide</a>
     </section>
 
-    <!-- CARDS: a quick preview of the three other pages -->
+    <!-- CARDS: a quick preview of the other pages -->
     <section class="cards">
       <article class="card">
         <h2><a href="about.html">About Us</a></h2>
@@ -75,8 +77,16 @@
         <p>A few key terms, an explanation of the IAT, and resources to read next.</p>
       </article>
       <article class="card">
-        <h2><a href="hero.html">Tech Hero</a></h2>
+        <a href="hero.html"><img class="hero-icon" src="assets/shuji-nakamura.jpg" alt="Shuji Nakamura" width="96" height="96" loading="lazy"></a>
+        <h2><a href="hero.html">Shuji Nakamura</a></h2>
         <p>Shuji Nakamura's earlier experience, the blue LED, and why we chose him.</p>
+        <p class="image-credit">Photo: MEXT via <a href="https://commons.wikimedia.org/wiki/File:Shuji_Nakamura_Nobel.jpg" target="_blank" rel="noopener">Wikimedia</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Square display crop.</p>
+      </article>
+      <article class="card">
+        <a href="gomez.html"><img class="hero-icon" src="assets/laura-gomez.jpg" alt="Laura I. G&oacute;mez" width="96" height="96" loading="lazy"></a>
+        <h2><a href="gomez.html">Laura I. G&oacute;mez</a></h2>
+        <p>A founder working on bias in hiring and inclusion in tech.</p>
+        <p class="image-credit">Photo: <a href="https://scet.berkeley.edu/laura-gomez-mission-eliminate-bias/" target="_blank" rel="noopener">UC Berkeley SCET</a>. Square display crop.</p>
       </article>
     </section>
   </main>

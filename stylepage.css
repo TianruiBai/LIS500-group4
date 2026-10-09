@@ -173,6 +173,22 @@ a:hover { color: var(--cds-link-primary-hover); }
   font-size: 0.875rem;
 }
 
+.hero-icon {
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  object-position: center 28%;
+  margin-bottom: 1rem;
+  border: 1px solid var(--cds-border-subtle-00);
+}
+
+.image-credit,
+.card .image-credit {
+  font-size: 0.75rem;
+  color: var(--cds-text-secondary);
+}
+
 .card::after {
   content: "\2192";
   position: absolute;
